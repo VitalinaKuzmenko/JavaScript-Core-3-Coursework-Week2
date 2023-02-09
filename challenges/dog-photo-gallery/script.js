@@ -11,8 +11,6 @@ async function getRandomDogImage() {
   try {
     const response = await fetch("https://dog.ceo/api/breeds/image/random");
     const data = await response.json();
-    console.log(response);
-    console.log(data);
     let image = document.querySelector("img");
     image.src = data.message;
   } catch (err) {
